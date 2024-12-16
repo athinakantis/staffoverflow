@@ -1,0 +1,5 @@
+.statusContainer.success {
+    margin: 4rem auto;
+    display: flex;
+    gap: 1rem;
+}

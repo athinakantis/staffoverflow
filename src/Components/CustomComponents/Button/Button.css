@@ -1,0 +1,55 @@
+button:hover {
+    cursor: pointer;
+}
+
+header button {
+    border: none;
+}
+
+button:has(img) {
+    border: none;
+    background-color: transparent;
+}
+
+main button {
+    font-size: 0.8rem;
+}
+
+.employeeCard button {
+    padding: 0 0.5rem;
+}
+
+.employeeCard .recognition {
+    padding: 0 1rem;
+}
+
+.schedule.btn {
+    align-items: center;
+    padding: 0.3rem 0.5rem;
+    font-weight: 700;
+    display: flex;
+    transition: all 300ms;
+}
+
+.schedule img {
+    width: 1rem;
+    margin: 0 0.5rem 0 0;
+}
+
+.emOptions button,
+.newEmployeeCard button,
+.removeContainer .btn,
+.removeEmp {
+    width: fit-content;
+    border: none;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    position: relative;
+    transition: transform 300ms, filter 150ms;
+    font-weight: var(--bold);
+    background-color: whitesmoke;
+
+    &:hover {
+        transform: translate(3px, 3px);
+    }
+}

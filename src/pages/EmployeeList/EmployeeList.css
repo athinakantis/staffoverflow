@@ -1,0 +1,69 @@
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#list {
+    width: 100%;
+}
+
+#emptyList {
+    background-color: white;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 2rem;
+    border: 1px solid var(--subtle);
+    margin: 6rem auto 0;
+}
+
+#employeeList {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.filterOptions {
+    width: 80%;
+    margin: 0 auto 1rem;
+}
+
+.nextPage,
+.prevPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+.pageNavigation {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    margin: 2rem auto 10rem;
+}
+
+.nextPage {
+    margin: 0 0 0 auto;
+    flex-direction: row-reverse;
+}
+
+.prevPage {
+    margin: 0 auto 0 0;
+}
+
+.nextPage img,
+.prevPage img {
+    height: 1rem;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}

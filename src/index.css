@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+
+    --mainColor: #2a2a50;
+    --mainColorAccent: #8b8bbe;
+    --dark: #212325;
+    --accent: #f48023;
+    --accentLight: #ffe5d0;
+    --subtle: #ddddec;
+
+    --light: 300;
+    --medium: 500;
+    --bold: 700;
+}
+
+#root {
+    min-height: 99vh;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    color: var(--dark);
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - 10rem);
+    margin: 2rem 0 0;
+}
+
+main:has(#addEmployee) {
+    min-height: calc(100vh - 6rem);
+}

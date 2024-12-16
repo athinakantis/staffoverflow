@@ -1,0 +1,43 @@
+#logInBtn {
+    color: white;
+    padding: 1rem 2rem;
+}
+
+#logInPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 7rem);
+}
+
+input,
+button,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input {
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+}
+
+a {
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
+.error {
+    color: rgb(199, 15, 15);
+    font-weight: var(--bold);
+    margin: 0rem 0 1rem;
+    font-size: 0.8rem;
+}
+
+.statusContainer {
+    padding: 2rem;
+    width: fit-content;
+    border: 1px solid var(--subtle);
+    background-color: white;
+    border-radius: 15px;
+}

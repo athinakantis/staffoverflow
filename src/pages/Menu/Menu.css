@@ -1,0 +1,48 @@
+#menuPage {
+    margin: 6rem auto 0;
+    width: 60%;
+}
+
+#menuPage h2 {
+    font-size: 2.5rem;
+}
+
+.welcomePrompt {
+    margin: 0 auto 2rem;
+}
+
+.suggestions {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.suggestion {
+    text-align: center;
+    flex: 1;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid var(--subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--dark);
+    transition: all 300ms;
+    gap: 0.5rem;
+
+    &:hover {
+        filter: drop-shadow(4px 7px 20px rgba(0, 0, 0, 0.1));
+    }
+
+    &:hover img {
+        transform: translateY(-10px);
+    }
+}
+
+.suggestion img {
+    width: 4rem;
+    transition: all 300ms;
+}

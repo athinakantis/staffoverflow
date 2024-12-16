@@ -1,0 +1,56 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem 0;
+}
+
+header img {
+    width: 8rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li:not(:last-of-type) {
+    margin: 0 1.5rem 0 0;
+}
+
+header nav :is(a, li:last-of-type) {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0;
+
+    &::after {
+        content: '';
+        width: 0%;
+        height: 1px;
+        display: block;
+        background-color: var(--mainColor);
+        transition: width 300ms;
+        opacity: 0.5;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+header nav .btn.primary {
+    background-color: transparent;
+    color: var(--dark);
+    font-weight: 700;
+    padding: 0;
+}
+
+header nav a.active::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: var(--mainColor);
+    transition: width 300ms;
+    opacity: 0.5;
+}

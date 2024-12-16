@@ -188,9 +188,7 @@ function NewEmployee() {
                 <>
                     <button onClick={() => setIsEditing((prev) => !prev)}>
                         <img
-                            src={`${
-                                import.meta.env.VITE_REACT_URL
-                            }/add_icon.svg`}
+                            src='/add_icon.svg'
                             alt='Add employee Icon'
                         />
                     </button>

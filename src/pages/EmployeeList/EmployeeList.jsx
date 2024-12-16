@@ -7,9 +7,7 @@ import Button from '../../Components/CustomComponents/Button/Button';
 import './EmployeeList.css';
 
 function EmployeeList() {
-    const { get } = useAxios(
-        `${import.meta.env.VITE_API_URL}`
-    );
+    const { get } = useAxios(`${import.meta.env.VITE_API_URL}`);
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]);
     const [page, setPage] = useState(1);
@@ -98,9 +96,7 @@ function EmployeeList() {
                             <div className='newEmployeeCard addNew'>
                                 <button onClick={() => navigate('/home/add')}>
                                     <img
-                                        src={`${
-                                            import.meta.env.VITE_REACT_URL
-                                        }/add_icon.svg`}
+                                        src='/add_icon.svg'
                                         alt='Add employee Icon'
                                     />
                                 </button>
@@ -115,9 +111,7 @@ function EmployeeList() {
                                     handleClick={() => {
                                         setPage((prev) => prev - 1);
                                     }}
-                                    img={`${
-                                        import.meta.env.VITE_REACT_URL
-                                    }/arrowBack.svg`}
+                                    img='/arrowBack.svg'
                                 />
                             )}
                             {page < totalPages.current && (
@@ -126,9 +120,7 @@ function EmployeeList() {
                                     handleClick={() => {
                                         setPage((prev) => prev + 1);
                                     }}
-                                    img={`${
-                                        import.meta.env.VITE_REACT_URL
-                                    }/arrowNext.svg`}
+                                    img='/arrowNext.svg'
                                     text='Next page'
                                 />
                             )}

@@ -26,7 +26,7 @@ function Success() {
         <section id='successPage'>
             <div className='statusContainer success'>
                 <img
-                    src={`${import.meta.env.VITE_REACT_URL}/success_Icon.svg`}
+                    src='/success_Icon.svg'
                     alt='Success Icon'
                 />
                 <div>

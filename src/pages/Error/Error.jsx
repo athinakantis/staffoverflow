@@ -27,9 +27,7 @@ function Error() {
                 className='statusContainer'
             >
                 <img
-                    src={`${
-                        import.meta.env.VITE_REACT_URL
-                    }/staffOverflow_logo.svg`}
+                    src='staffOverflow_logo.svg'
                     alt='staffoverflow logo'
                     className='logo'
                 />

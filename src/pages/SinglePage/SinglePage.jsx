@@ -34,7 +34,7 @@ function SinglePage() {
                     });
                 }
             } catch (err) {
-                console.error(err)
+                console.error(err);
                 navigate('/error', {
                     state: {
                         status: 500,
@@ -117,9 +117,12 @@ function SinglePage() {
 
     return (
         <section id='inspectEmployee'>
-            <button className='btn return' onClick={() => navigate(-1)}>
+            <button
+                className='btn return'
+                onClick={() => navigate(-1)}
+            >
                 <img
-                    src={`${import.meta.env.VITE_REACT_URL}/returnIcon.svg`}
+                    src='/returnIcon.svg'
                     alt='Return icon'
                 />
                 Back to list
@@ -148,17 +151,13 @@ function SinglePage() {
                                 <Button
                                     role='save'
                                     handleClick={handleUpdateEmployee}
-                                    img={`${
-                                        import.meta.env.VITE_REACT_URL
-                                    }/save_Icon.svg`}
+                                    img='/save_Icon.svg'
                                 />
                             ) : (
                                 <Button
                                     role='edit'
                                     handleClick={() => setEdit((prev) => !prev)}
-                                    img={`${
-                                        import.meta.env.VITE_REACT_URL
-                                    }/edit.svg`}
+                                    img='/edit.svg'
                                     imgAlt='Edit'
                                 />
                             )}
@@ -196,7 +195,7 @@ function SinglePage() {
                             ) : (
                                 <>
                                     <p className='removeWarning'>
-                                       {`Are you sure you want to remove
+                                        {`Are you sure you want to remove
                                         ${employee?.firstname}
                                         ${employee?.lastname}? This action is
                                         irreversible!`}
@@ -206,7 +205,9 @@ function SinglePage() {
                                         <Button
                                             role='warningReturn'
                                             text='No, go back ✘'
-                                            handleClick={() => setIsRemoving(false)}
+                                            handleClick={() =>
+                                                setIsRemoving(false)
+                                            }
                                         />
                                         <Button
                                             role='confirm'

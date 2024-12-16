@@ -1,4 +1,3 @@
-
 /* GET requests */
 
 // All employees
@@ -15,7 +14,8 @@ export async function fetchEmployee(id) {
 export async function fetchFilteredEmployees(filterGroup, filter, page) {
     try {
         const response = await fetch(
-            `${import.meta.env.VITE_API_URL
+            `${
+                import.meta.env.VITE_API_URL
             }/employees?${filterGroup}=${filter}&_page=${page}&_sort=firstname&_order=asc`
         );
         const data = await response.json();

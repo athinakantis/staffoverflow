@@ -22,23 +22,30 @@ function EmployeeCard(props) {
     const { yearsWorked, isProbation, isAnniversary } =
         useEmployeeStatus(startdate);
 
-    const currentTeamLead = teamLeads?.find(a => a.department == department)
+    const currentTeamLead = teamLeads?.find((a) => a.department == department);
     async function handleRoleChange() {
         try {
             if (currentTeamLead && currentTeamLead.id != id) {
-                setMsg(`Error: ${currentTeamLead.employeeName} is currently team leader`);
-                return setTimeout(() => setMsg(''), 3000)
+                setMsg(
+                    `Error: ${currentTeamLead.employeeName} is currently team leader`
+                );
+                return setTimeout(() => setMsg(''), 3000);
             } else if (!currentTeamLead) {
                 setMsg('');
-                setTeamLeads(prev => [...prev, {
-                    department: department,
-                    id: id,
-                    employeeName: `${firstname} ${lastname}`
-                }]);
+                setTeamLeads((prev) => [
+                    ...prev,
+                    {
+                        department: department,
+                        id: id,
+                        employeeName: `${firstname} ${lastname}`,
+                    },
+                ]);
                 setRole('Team leader');
             } else if (currentTeamLead && currentTeamLead.id == id) {
                 setMsg('');
-                setTeamLeads(teamLeads.filter(a => a.department !== department))
+                setTeamLeads(
+                    teamLeads.filter((a) => a.department !== department)
+                );
                 setRole(initialRole);
             }
         } catch (err) {
@@ -94,9 +101,7 @@ function EmployeeCard(props) {
                     id='changeRole'
                     handleClick={handleRoleChange}
                     type='button'
-                    text={
-                        currentTeamLead?.id == id ? 'Demote' : 'Promote'
-                    }
+                    text={currentTeamLead?.id == id ? 'Demote' : 'Promote'}
                 />
                 <Button
                     text='See more'
@@ -107,16 +112,14 @@ function EmployeeCard(props) {
                     <Button
                         text='Schedule recognition meeting'
                         role='schedule recognition'
-                        img={`${import.meta.env.VITE_REACT_URL}/cake.svg`}
+                        img='/cake.svg'
                     />
                 )}
                 {isProbation && (
                     <Button
                         text='Schedule assessment review'
                         role='schedule assessment'
-                        img={`${
-                            import.meta.env.VITE_REACT_URL
-                        }/chat_bubbles.svg`}
+                        img='/chat_bubbles.svg'
                     />
                 )}
             </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../Components/CustomComponents/Button/Button';
-import styles from './Login.module.css'
+import styles from './Login.module.css';
 
 function Login({}) {
     const [user, setUser] = useState({
@@ -22,7 +22,10 @@ function Login({}) {
 
     return (
         <section className={`${styles.logInPage}`}>
-                <img src={`${import.meta.env.VITE_REACT_URL}/staffOverflow_logo.svg`} alt="Staffoverflow Logo" />
+            <img
+                src='/staffOverflow_logo.svg'
+                alt='Staffoverflow Logo'
+            />
             <div className={`${styles.logInContainer}`}>
                 <h2 className={`${styles.h2}`}>Log in</h2>
                 <form className={`${styles.form}`}>

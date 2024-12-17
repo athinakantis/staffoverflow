@@ -1,4 +1,9 @@
-footer p {
+footer div {
+    display: flex;
     width: 80%;
     margin: 0 auto;
+}
+
+footer img {
+    opacity: 0;
 }

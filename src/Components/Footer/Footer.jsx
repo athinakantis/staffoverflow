@@ -3,7 +3,14 @@ import './Footer.css';
 function Footer() {
     return (
         <footer>
-            <p>Copyright &copy; 2024 Athina Kantis</p>
+            <div>
+                <p>Copyright &copy; 2024 Athina Kantis</p>
+
+                <img
+                    src='/copyright.png'
+                    alt='Copyright'
+                />
+            </div>
         </footer>
     );
 }

@@ -44,3 +44,55 @@ main {
 main:has(#addEmployee) {
     min-height: calc(100vh - 6rem);
 }
+
+main:has(#inspectEmployee) {
+    min-height: calc(100vh - 8rem);
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 850px) {
+    main #menuPage {
+        width: 80%;
+    }
+
+    .suggestion {
+        padding: 1rem;
+    }
+}
+@media only screen and (max-width: 510px) {
+    header {
+        padding: 0.5rem 0.5rem 0;
+    }
+
+    header nav {
+        font-size: 0.73rem;
+    }
+
+    header nav ul li:not(:last-of-type) {
+        margin: 0 0.7rem 0 0;
+    }
+
+    main #menuPage {
+        margin: 3rem auto 0;
+    }
+
+    main #menuPage h2 {
+        font-size: 1.8rem;
+    }
+
+    #menuPage .welcomePrompt {
+        line-height: 0.8;
+    }
+
+    main {
+        min-height: calc(100vh - 7.8rem);
+    }
+
+    .suggestions {
+        flex-direction: column;
+    }
+
+    .suggestion {
+        padding: 2rem;
+    }
+}

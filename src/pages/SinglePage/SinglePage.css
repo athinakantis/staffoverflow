@@ -3,6 +3,7 @@
     width: 60%;
     padding: 1rem;
     min-height: calc(100vh - 12rem);
+    max-width: 800px;
 }
 
 #inspectEmployee .inspect {

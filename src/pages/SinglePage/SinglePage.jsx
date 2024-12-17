@@ -17,7 +17,7 @@ function SinglePage() {
     const [msg, setMsg] = useState('');
     const [formData, setFormData] = useState({});
     const { loading, get, patch, remove } = useAxios(
-        `${import.meta.env.VITE_API_URL}`
+        import.meta.env.VITE_API_URL
     );
 
     // Delete employee

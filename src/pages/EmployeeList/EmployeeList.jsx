@@ -7,7 +7,7 @@ import Button from '../../Components/CustomComponents/Button/Button';
 import './EmployeeList.css';
 
 function EmployeeList() {
-    const { get } = useAxios(`${import.meta.env.VITE_API_URL}`);
+    const { get } = useAxios(import.meta.env.VITE_API_URL);
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]);
     const [page, setPage] = useState(1);
@@ -24,25 +24,23 @@ function EmployeeList() {
     useEffect(() => {
         const getEmployees = async () => {
             try {
-                const response = await get(
-                    `/employees?_page=${page}&_sort=firstname`
-                );
-                totalPages.current = response.pages;
+                const response = await get(`/employees?_page=${page}`);
+                totalPages.current = response.pages.totalPages;
                 setEmployees(response.data);
             } catch (error) {
-                showError();
+                showError(error);
             }
         };
 
         const getFilteredEmployees = async () => {
             try {
                 const response = await get(
-                    `/employees?${filterGroup}=${filter}&_page=${page}&_sort=firstname`
+                    `/employees?key=${filterGroup}&value=${filter}&_page=${page}`
                 );
                 setEmployees(response.data);
                 totalPages.current = response.pages;
-            } catch (err) {
-                showError();
+            } catch (error) {
+                showError(error);
             }
         };
 
@@ -53,10 +51,10 @@ function EmployeeList() {
         }
     }, [page, filter]);
 
-    const showError = () => {
+    const showError = (error) => {
         navigate('/error', {
             state: {
-                message: err.message,
+                message: error.message,
                 status: 500,
             },
         });

@@ -16,6 +16,21 @@ section {
     margin: 6rem auto 0;
 }
 
+/*
+Congratulations, you found my easter egg :D
+
+      .-*)) `*-.
+     /*  ((*   *'.
+    |   *))  *   *\
+    | *  ((*   *  /
+     \  *))  *  .'
+      '-.((*_.-'
+
+
+Cute egg found at
+https://oldcompcz.github.io/jgs/joan_stark/easter.html
+*/
+
 #employeeList {
     display: flex;
     gap: 1rem;

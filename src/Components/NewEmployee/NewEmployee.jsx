@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import './NewEmployee.css';
 import { useNavigate } from 'react-router-dom';
 import { validateNewEmp } from '../../utils/validateInput';
-import { addNewEmployee } from '../../utils/requests';
+import useAxios from '../../utils/useAxios';
 
 function NewEmployee() {
+    const { post } = useAxios(import.meta.env.VITE_API_URL);
     const [isEditing, setIsEditing] = useState(true);
     const [submitted, setSubmitted] = useState(false);
     const [msg, setMsg] = useState('');
@@ -16,7 +17,7 @@ function NewEmployee() {
         department: 'Default',
         employment_type: 'Default',
         location: '',
-        salary: null,
+        salary: '',
         startdate: currentDate,
     });
 
@@ -44,7 +45,9 @@ function NewEmployee() {
         if (submitted) {
             async function submitForm() {
                 try {
-                    const response = await addNewEmployee(formData);
+                    await post('/employees', formData, {
+                        'Content-type': 'application/json',
+                    });
                     navigate(`/home/employees/${response.id}`);
                 } catch (error) {
                     navigate('/error', {

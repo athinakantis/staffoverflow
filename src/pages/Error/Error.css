@@ -8,6 +8,7 @@
 #errorContainer {
     position: relative;
     top: -170px;
+    min-width: 310px;
 }
 
 #errorContainer h2 {

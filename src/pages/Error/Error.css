@@ -2,20 +2,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
+    flex-direction: column;
+    width: fit-content;
+    gap: 0.4rem;
 }
 
 #errorContainer {
-    position: relative;
-    top: -170px;
     min-width: 310px;
 }
 
 #errorContainer h2 {
-    font-size: 2rem;
-    margin: 1rem 0;
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1;
+}
+#errorContainer p {
+    font-weight: 500;
 }
 
-#errorContainer .logo {
+#errorPage .logo {
     width: 8rem;
+    align-self: start;
+}
+
+#errorPage a {
+    text-decoration: none;
+    background-color: var(--subtle);
+    display: block;
+    margin: 0.3rem 0 0 auto;
+    padding: 0.2rem 0.6rem;
+    color: inherit;
+    border-radius: 3px;
+    transition: all 200ms;
+
+    &:hover {
+        background-color: rgb(209, 205, 220);
+    }
 }

@@ -22,19 +22,19 @@ function Error() {
 
     return (
         <section id='errorPage'>
+            <img
+                src='/staffOverflow_logo.svg'
+                alt='staffoverflow logo'
+                className='logo'
+            />
             <div
                 id='errorContainer'
                 className='statusContainer'
             >
-                <img
-                    src='/staffOverflow_logo.svg'
-                    alt='staffoverflow logo'
-                    className='logo'
-                />
                 <h2>{errorInfo.status}</h2>
                 <p>{errorInfo.message}</p>
-                <Link to='/'>Back home</Link>
             </div>
+            <Link to='/'>Back home</Link>
         </section>
     );
 }

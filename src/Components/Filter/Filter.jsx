@@ -1,14 +1,13 @@
 import Select from '../CustomComponents/Select/Select';
 import './Filter.css';
 
-function Filter({ setFilter, setPage, setFilterGroup, filterGroup }) {
+function Filter({ setFilter, setPage, filter }) {
     function handleFilterGroup(e) {
         const { value } = e.target;
         if (value !== 'Default') {
-            setFilterGroup(value.toLowerCase());
+            setFilter({ ...filter, ['key']: value.toLowerCase() });
         } else {
-            setFilterGroup('Default');
-            setFilter('Default');
+            setFilter({ key: 'Default', value: 'Default' });
         }
     }
 
@@ -24,9 +23,9 @@ function Filter({ setFilter, setPage, setFilterGroup, filterGroup }) {
                 <option value='Location'>Location</option>
                 <option value='Department'>Department</option>
             </select>
-            {filterGroup !== 'Default' && (
+            {filter.key !== 'Default' && (
                 <Select
-                    group={filterGroup}
+                    filter={filter}
                     setFilter={setFilter}
                     setPage={setPage}
                 />

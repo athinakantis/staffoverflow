@@ -1,6 +1,6 @@
 import Error from '../pages/Error/Error';
 import Login from '../pages/Login/Login';
-import List from '../pages/EmployeeList/EmployeeList';
+import List from '../pages/List/List';
 import Root from '../pages/Root/Root';
 import Form from '../pages/Form/Form';
 import Menu from '../pages/Menu/Menu';

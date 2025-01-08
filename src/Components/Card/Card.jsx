@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './EmployeeCard.css';
+import './Card.css';
 import Button from '../CustomComponents/Button/Button';
 import useEmployeeStatus from '../../utils/useEmployeeStatus';
 import { formatTimeWorked } from '../../utils/calc';
@@ -22,6 +22,7 @@ function EmployeeCard(props) {
     const { isProbation, isAnniversary } = useEmployeeStatus(startdate);
 
     const currentTeamLead = teamLeads?.find((a) => a.department == department);
+
     async function handleRoleChange() {
         try {
             if (currentTeamLead && currentTeamLead.id != id) {

@@ -1,12 +1,12 @@
 import options from '../../../data/filters';
 import './Select.css';
 
-function Select({ group, setFilter, setPage }) {
-    const { data } = options[group];
+function Select({ filter, setFilter, setPage }) {
+    const { data } = options[filter.key];
 
     function handleFilterChange(e) {
         const { value } = e.target;
-        setFilter(value);
+        setFilter({ ...filter, ['value']: value });
         setPage(1);
     }
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_2" data-name="Lager 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.12 122.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        fill:rgb(190, 190, 190);
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="44.56" height="122.22"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="44.56" width="44.56" height="122.22"/>
+    </clipPath>
+  </defs>
+  <g id="Lager_1-2" data-name="Lager 1">
+    <g>
+      <g id="_Upprepa_Spegla_" data-name="&amp;lt;Upprepa Spegla&amp;gt;">
+        <g class="cls-4">
+          <path class="cls-3" d="M0,122.22s5.82-21.78,19.01-32.22c9.71-7.69,12.03-16.17,10.52-20.83-2.06-6.32-6.89-14.76-8.4-22.68C17.39,26.94,27.1,0,45.28,0v122.22H0Z"/>
+        </g>
+      </g>
+      <g id="_Upprepa_Spegla_-2" data-name="&amp;lt;Upprepa Spegla&amp;gt;">
+        <g class="cls-2">
+          <path class="cls-3" d="M89.12,122.22s-5.82-21.78-19.01-32.22c-9.71-7.69-12.03-16.17-10.52-20.83,2.06-6.32,6.89-14.76,8.4-22.68C71.74,26.94,62.02,0,43.84,0v122.22h45.28Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

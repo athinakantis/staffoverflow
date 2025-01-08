@@ -170,6 +170,7 @@ function NewEmployee() {
                         <div>
                             <label htmlFor='startdate'>Date of hiring</label>
                             <input
+                                max={new Date().toISOString().substring(0, 10)}
                                 onChange={handleChange}
                                 type='date'
                                 name='startdate'

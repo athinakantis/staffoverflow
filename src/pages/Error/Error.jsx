@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import './Error.css';
 import { Link, useLocation } from 'react-router-dom';
+import './Error.css';
 
 function Error() {
     const location = useLocation();
@@ -27,7 +27,7 @@ function Error() {
                 className='statusContainer'
             >
                 <img
-                    src='staffOverflow_logo.svg'
+                    src='/staffOverflow_logo.svg'
                     alt='staffoverflow logo'
                     className='logo'
                 />

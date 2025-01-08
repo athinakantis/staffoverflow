@@ -45,10 +45,10 @@ function NewEmployee() {
         if (submitted) {
             async function submitForm() {
                 try {
-                    await post('/employees', formData, {
+                    const response = await post('/employees', formData, {
                         'Content-type': 'application/json',
                     });
-                    navigate(`/home/employees/${response.id}`);
+                    navigate(`/home/employees/${response}`);
                 } catch (error) {
                     navigate('/error', {
                         state: {

@@ -1,6 +1,7 @@
 function Spinner({ background = 'light' }) {
   return (
     <img
+      className='spinnerImg'
       src={
         background === 'light'
           ? `/src/assets/Spinner_white.gif`

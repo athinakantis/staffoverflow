@@ -28,11 +28,11 @@ function Login({}) {
             />
             <div className={`${styles.logInContainer}`}>
                 <h2 className={`${styles.h2}`}>Log in</h2>
-                <form className={`${styles.form}`}>
+                <form>
                     <div className={`${styles.formDiv}`}>
                         <label htmlFor='username'>Username</label>
                         <input
-                            className={`${styles.input}`}
+                            className={`${styles.inputFields}`}
                             type='text'
                             name='username'
                             id='username'
@@ -44,6 +44,7 @@ function Login({}) {
                         <label htmlFor='password'>Password</label>
 
                         <input
+                            className={`${styles.inputFields}`}
                             type='password'
                             name='password'
                             id='password'

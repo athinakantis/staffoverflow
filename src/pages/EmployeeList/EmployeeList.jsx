@@ -4,8 +4,8 @@ import useAxios from '../../utils/useAxios';
 import EmployeeCard from '../../Components/EmployeeCard/EmployeeCard';
 import Filter from '../../Components/Filter/Filter';
 import Button from '../../Components/CustomComponents/Button/Button';
-import './EmployeeList.css';
 import Spinner from '../../Components/Spinner/Spinner';
+import './EmployeeList.css';
 
 function EmployeeList() {
   const { get } = useAxios(import.meta.env.VITE_API_URL);
@@ -31,6 +31,7 @@ function EmployeeList() {
           const response = await get(`/employees?_page=${page}`);
           totalPages.current = response.pages.totalPages;
           setEmployees(response.data);
+          setLoading(false);
           return;
         } catch (error) {
           if (i < retries - 1) {
@@ -74,68 +75,74 @@ function EmployeeList() {
 
   return (
     <section id='list'>
-      {employees?.length < 1 ? (
-        <div id='emptyList'>
-          <p>Employee list is currently empty!</p>
-          <Link to='/home/add'>Add employees</Link>
-        </div>
+      {loading ? (
+        <Spinner background='aliceblue' />
       ) : (
         <>
-          <Filter
-            employees={employees}
-            setFilter={setFilter}
-            setFilterGroup={setFilterGroup}
-            filterGroup={filterGroup}
-            setPage={setPage}
-          />
-          <div className='listContainer'>
-            <div id='employeeList'>
-              {Array.isArray(employees) &&
-                employees.map((employee) => {
-                  return (
-                    <EmployeeCard
-                      key={employee?.id}
-                      {...employee}
-                      initialRole={employee?.role}
-                      teamLeads={teamLeads}
-                      setTeamLeads={setTeamLeads}
-                      handleNavigate={handleNavigate}
+          {employees?.length > 0 ? (
+            <>
+              <Filter
+                employees={employees}
+                setFilter={setFilter}
+                setFilterGroup={setFilterGroup}
+                filterGroup={filterGroup}
+                setPage={setPage}
+              />
+              <div className='listContainer'>
+                <div id='employeeList'>
+                  {Array.isArray(employees) &&
+                    employees.map((employee) => {
+                      return (
+                        <EmployeeCard
+                          key={employee?.id}
+                          {...employee}
+                          initialRole={employee?.role}
+                          teamLeads={teamLeads}
+                          setTeamLeads={setTeamLeads}
+                          handleNavigate={handleNavigate}
+                        />
+                      );
+                    })}
+                  <div className='newEmployeeCard addNew'>
+                    <button onClick={() => navigate('/home/add')}>
+                      <img
+                        src='/add_icon.svg'
+                        alt='Add employee Icon'
+                      />
+                    </button>
+                    <p>Add new employee</p>
+                  </div>
+                </div>
+                <div className='pageNavigation'>
+                  {page > 1 && (
+                    <Button
+                      role='prevPage'
+                      text='Previous page'
+                      handleClick={() => {
+                        setPage((prev) => prev - 1);
+                      }}
+                      img='/arrowBack.svg'
                     />
-                  );
-                })}
-              <div className='newEmployeeCard addNew'>
-                <button onClick={() => navigate('/home/add')}>
-                  <img
-                    src='/add_icon.svg'
-                    alt='Add employee Icon'
-                  />
-                </button>
-                <p>Add new employee</p>
+                  )}
+                  {page < totalPages.current && (
+                    <Button
+                      role='nextPage'
+                      handleClick={() => {
+                        setPage((prev) => prev + 1);
+                      }}
+                      img='/arrowNext.svg'
+                      text='Next page'
+                    />
+                  )}
+                </div>
               </div>
+            </>
+          ) : (
+            <div id='emptyList'>
+              <p>Employee list is currently empty!</p>
+              <Link to='/home/add'>Add employees</Link>
             </div>
-            <div className='pageNavigation'>
-              {page > 1 && (
-                <Button
-                  role='prevPage'
-                  text='Previous page'
-                  handleClick={() => {
-                    setPage((prev) => prev - 1);
-                  }}
-                  img='/arrowBack.svg'
-                />
-              )}
-              {page < totalPages.current && (
-                <Button
-                  role='nextPage'
-                  handleClick={() => {
-                    setPage((prev) => prev + 1);
-                  }}
-                  img='/arrowNext.svg'
-                  text='Next page'
-                />
-              )}
-            </div>
-          </div>
+          )}
         </>
       )}
     </section>

@@ -1,5 +1,20 @@
 .statusContainer.success {
-    margin: 4rem auto;
     display: flex;
     gap: 1rem;
+    justify-content: center;
+}
+
+#successPage h2 {
+    margin: 0;
+}
+
+#successPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+#successPage img {
+    width: 3rem;
 }

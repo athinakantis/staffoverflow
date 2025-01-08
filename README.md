@@ -184,3 +184,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 The backend is by no means optimal, beautiful or very clever but I am happy that it works and it taught me a lot.  
 I do think the next time I make a backend from scratch things will be more clear and I will be able to plan it out a bit better.
+
+### Using CSS modules
+
+In order to keep CSS local you can use change the CSS file into a module.  
+First, I renamed my CSS file to include 'module' as such: `Login.module.css`.  
+Then, instead of importing the CSS file I imported 'styles' from the module.
+
+```js
+import styles from './Login.module.css';
+```
+
+Then apply the styles using className, a JSX expression and a template literal:
+
+```js
+<div className={`${styles.logInContainer}`}>
+```
+
+The next time I want to keep all CSS local, I'll make sure to use this method from the get go!

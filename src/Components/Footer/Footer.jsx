@@ -1,10 +1,11 @@
 import './Footer.css';
 
 function Footer() {
+    const thisYear = new Date().getFullYear();
     return (
         <footer>
             <div>
-                <p>Copyright &copy; 2024 Athina Kantis</p>
+                <p>Copyright &copy; {thisYear} Athina Kantis</p>
 
                 <img
                     src='/copyright.png'

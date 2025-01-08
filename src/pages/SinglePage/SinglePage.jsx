@@ -51,6 +51,7 @@ function SinglePage() {
         const getEmployee = async () => {
             try {
                 const employeeData = await get(`/employees/${id}`);
+                if (!employeeData) throw new Error('Employee not found');
                 setEmployee(employeeData);
                 setFormData({
                     department: employeeData.department,
@@ -62,7 +63,7 @@ function SinglePage() {
                 navigate('/error', {
                     state: {
                         status: 500,
-                        message: 'Error when retrieving employee data',
+                        message: error.message,
                     },
                 });
             }

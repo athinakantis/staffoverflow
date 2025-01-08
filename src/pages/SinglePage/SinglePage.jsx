@@ -128,7 +128,7 @@ function SinglePage() {
                 Back to list
             </button>
             {loading ? (
-                <Spinner />
+                <Spinner background='aliceblue' />
             ) : (
                 <div id='employeeContainer'>
                     <div className='employeeCard inspect'>

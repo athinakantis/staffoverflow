@@ -4,13 +4,13 @@ import Button from '../../Components/CustomComponents/Button/Button';
 
 function Menu() {
     const location = useLocation();
-    const username = localStorage.getItem('username') || 'admin'
+    const username = localStorage.getItem('username') || 'admin';
     const navigate = useNavigate();
 
     return (
         <section id='menuPage'>
             <div className='welcomePrompt'>
-                <h2>Welcome @{username}!</h2>
+                <h2>Welcome {username}!</h2>
                 <p>What do you want to do?</p>
             </div>
             <div className='suggestions'>

@@ -1,99 +1,103 @@
 #inspectEmployee {
-    margin: 4rem auto;
-    width: 60%;
-    padding: 1rem;
-    min-height: calc(100vh - 12rem);
-    max-width: 800px;
+  margin: 4rem auto;
+  width: 60%;
+  padding: 1rem;
+  min-height: calc(100vh - 12rem);
+  max-width: 800px;
 }
 
 #inspectEmployee .inspect {
-    border: 1px solid var(--subtle);
-    border-radius: 3px;
-    filter: none;
-    border: none;
-    flex: 40%;
-    max-width: 100%;
+  border: 1px solid var(--subtle);
+  border-radius: 3px;
+  filter: none;
+  border: none;
+  flex: 40%;
+  max-width: 100%;
 
-    &:hover {
-        filter: none;
-    }
+  &:hover {
+    filter: none;
+  }
 }
 .removeWarning {
-    font-weight: var(--medium);
-    line-height: 1.2;
-    margin: 0 0 1rem;
+  font-weight: var(--medium);
+  line-height: 1.2;
+  margin: 0 0 1rem;
 }
 
 .inspect input {
-    border: none;
-    background-color: ghostwhite;
-    text-align: end;
-    margin: 0;
-    width: 40%;
+  border: none;
+  background-color: ghostwhite;
+  text-align: end;
+  margin: 0;
+  width: 40%;
 
-    &:focus-visible {
-        outline: 1px solid var(--subtle);
-    }
+  &:focus-visible {
+    outline: 1px solid var(--subtle);
+  }
 }
 
 .removeContainer {
-    margin: 1rem 0 0;
+  margin: 1rem 0 0;
 }
 
 .warningContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #inspectEmployee .btn.return {
-    background-color: transparent;
-    color: var(--dark);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0 0 0.3rem;
-    text-align: end;
+  background-color: transparent;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0 0 0.3rem;
+  text-align: end;
 }
 
 #inspectEmployee .btn.return img {
-    width: 1.2rem;
-    margin: 0;
+  width: 1.2rem;
+  margin: 0;
 }
 
 #employeeContainer {
-    background-color: white;
-    display: flex;
-    min-height: 420px;
+  background-color: white;
+  display: flex;
+  min-height: 420px;
 }
 
 #employeeContainer .emInfo {
-    padding: 0.7rem 0.9rem 1rem;
-    flex: 50%;
-    margin: 0;
-    justify-content: space-between;
-    flex-direction: column;
-    display: flex;
+  padding: 0.7rem 0.9rem 1rem;
+  flex: 50%;
+  margin: 0;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
 }
 
 .emDetails input {
-    text-align: end;
+  text-align: end;
 }
 
 .inspect .frame {
-    height: 100%;
+  height: 100%;
+}
+
+.inspect .frame [src='/src/assets/Spinner_white.gif'] {
+  align-self: center;
 }
 
 .btn:is(.edit, .save) {
-    margin: 0 0 1rem auto;
-    display: block;
+  margin: 0 0 1rem auto;
+  display: block;
 
-    & img {
-        width: 1.7rem;
-    }
+  & img {
+    width: 1.7rem;
+  }
 }
 
 .removeEmp {
-    margin: 0 0 0 auto;
-    display: block;
+  margin: 0 0 0 auto;
+  display: block;
 }

@@ -1,67 +1,72 @@
 .newEmployeeCard.addNew img {
-    width: 5rem;
+  width: 5rem;
 }
 
 .newEmployeeCard.addNew {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border: 1px solid var(--subtle);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid var(--subtle);
 }
 
 .newEmployeeCard .frame {
-    height: 200px;
+  height: 200px;
+}
+
+.newEmployeeCard .frame img {
+  height: 175px;
+  scale: 1 0.99;
 }
 
 .addNew button {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .newEmployeeCard form > div {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0.6rem;
 }
 
 .newEmployeeCard form input,
 form select {
-    border: none;
-    background-color: ghostwhite;
-    text-align: end;
-    margin: 0;
+  border: none;
+  background-color: ghostwhite;
+  text-align: end;
+  margin: 0;
 
-    width: 40%;
+  width: 40%;
 
-    &:focus {
-        outline: 1px solid var(--subtle);
-    }
+  &:focus {
+    outline: 1px solid var(--subtle);
+  }
 }
 
 .newEmployeeCard option {
-    transition: background-color 300ms;
-    text-align: center;
+  transition: background-color 300ms;
+  text-align: center;
 
-    &:hover {
-        background-color: var(--subtle);
-    }
+  &:hover {
+    background-color: var(--subtle);
+  }
 }
 
 .newEmployeeCard form label {
-    border-bottom: 1px solid var(--subtle);
+  border-bottom: 1px solid var(--subtle);
 }
 
 .newEmployeeCard.edit button {
-    margin: 1rem 0 0;
+  margin: 1rem 0 0;
 }
 
 .newEmployeeCard form > div:last-of-type {
-    border: none;
+  border: none;
 }
 
 #addEmployee .addNew {
-    height: 642px;
+  height: 642px;
 }
 
 #addEmployee div {
-    max-width: 410px;
+  max-width: 410px;
 }

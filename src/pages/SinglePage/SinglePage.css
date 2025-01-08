@@ -61,6 +61,11 @@
     margin: 0;
 }
 
+#inspectEmployee h2 {
+    line-height: 1.2;
+    margin: 0;
+}
+
 #employeeContainer {
     background-color: white;
     display: flex;

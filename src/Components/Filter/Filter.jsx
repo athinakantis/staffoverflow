@@ -5,7 +5,7 @@ function Filter({ setFilter, setPage, filter }) {
     function handleFilterGroup(e) {
         const { value } = e.target;
         if (value !== 'Default') {
-            setFilter({ ...filter, ['key']: value.toLowerCase() });
+            setFilter({ key: value.toLowerCase(), value: 'Default' });
         } else {
             setFilter({ key: 'Default', value: 'Default' });
         }
